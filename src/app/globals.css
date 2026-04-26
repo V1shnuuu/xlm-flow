@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 210 35% 10%;
+  --foreground: 210 40% 96%;
+  --card: 210 30% 14%;
+  --border: 193 24% 28%;
+  --muted: 210 16% 68%;
+  --primary: 190 85% 54%;
+  --success: 146 65% 44%;
+  --danger: 0 75% 59%;
+}
+
+.dark {
+  --background: 222 44% 8%;
+  --foreground: 210 40% 98%;
+  --card: 220 35% 12%;
+  --border: 212 32% 26%;
+  --muted: 214 18% 70%;
+  --primary: 192 95% 58%;
+  --success: 144 68% 45%;
+  --danger: 0 85% 64%;
+}
+
+* {
+  border-color: hsl(var(--border));
+}
+
+body {
+  font-family: var(--font-space-grotesk), sans-serif;
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at 15% 20%, rgba(17, 195, 250, 0.2), transparent 35%),
+    radial-gradient(circle at 80% 5%, rgba(31, 110, 232, 0.22), transparent 42%),
+    linear-gradient(160deg, #08131f 0%, #0d1f2f 45%, #071724 100%);
+}
+
+@layer utilities {
+  .glass-card {
+    background: linear-gradient(145deg, rgba(16, 30, 45, 0.78), rgba(9, 20, 31, 0.72));
+    backdrop-filter: blur(14px);
+    border: 1px solid rgba(130, 192, 230, 0.28);
+    box-shadow: 0 10px 30px rgba(1, 9, 16, 0.35);
+  }
+
+  .subtle-grid {
+    background-image:
+      linear-gradient(to right, rgba(125, 196, 233, 0.08) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(125, 196, 233, 0.08) 1px, transparent 1px);
+    background-size: 40px 40px;
+  }
+}
